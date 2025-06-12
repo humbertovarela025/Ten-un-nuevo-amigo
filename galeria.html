@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Galería - Adopta a un Amigo</title>
-<link rel="stylesheet" href="estilogaleria.css">
+  <link rel="stylesheet" href="estilogaleria.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -25,39 +25,58 @@
     <section>
       <h3>Raza Pequeña</h3>
       <div class="galeria">
-        <div class="foto"><img src="img/perros más pequeños 1.jpg" alt="Perro pequeño 1"><p>Firulais</p></div>
-        <div class="foto"><img src="img/perros más pequeños 2.jpg" alt="Perro pequeño 2"><p>Luna</p></div>
-        <div class="foto"><img src="img/perros más pequeños 3.jpg" alt="Perro pequeño 3"><p>Toby</p></div>
-        <div class="foto"><img src="img/perros más pequeños 4.jpg" alt="Perro pequeño 4"><p>Milo</p></div>
-        <div class="foto"><img src="img/perros más pequeños 5.jpg" alt="Perro pequeño 5"><p>Nala</p></div>
+        <div class="foto"><img src="img/perros más pequeños 1.jpg" alt="Perro pequeño 1" onclick="mostrarImagen(this)"><p>Firulais</p></div>
+        <div class="foto"><img src="img/perros más pequeños 2.jpg" alt="Perro pequeño 2" onclick="mostrarImagen(this)"><p>Luna</p></div>
+        <div class="foto"><img src="img/perros más pequeños 3.jpg" alt="Perro pequeño 3" onclick="mostrarImagen(this)"><p>Toby</p></div>
+        <div class="foto"><img src="img/perros más pequeños 4.jpg" alt="Perro pequeño 4" onclick="mostrarImagen(this)"><p>Milo</p></div>
+        <div class="foto"><img src="img/perros más pequeños 5.jpg" alt="Perro pequeño 5" onclick="mostrarImagen(this)"><p>Nala</p></div>
       </div>
     </section>
 
     <section>
       <h3>Raza Mediana</h3>
       <div class="galeria">
-        <div class="foto"><img src="img/perros raza mediana 1.jpg" alt="Perro mediano 1"><p>Rocky</p></div>
-        <div class="foto"><img src="img/perros raza mediana 2.jpg" alt="Perro mediano 2"><p>Max</p></div>
-        <div class="foto"><img src="img/perros raza mediana 3.jpg" alt="Perro mediano 3"><p>Canela</p></div>
-        <div class="foto"><img src="img/perros raza mediana 4.jpg" alt="Perro mediano 4"><p>Daisy</p></div>
-        <div class="foto"><img src="img/perros raza mediana 5.jpg" alt="Perro mediano 5"><p>Chispa</p></div>
+        <div class="foto"><img src="img/perros raza mediana 1.jpg" alt="Perro mediano 1" onclick="mostrarImagen(this)"><p>Rocky</p></div>
+        <div class="foto"><img src="img/perros raza mediana 2.jpg" alt="Perro mediano 2" onclick="mostrarImagen(this)"><p>Max</p></div>
+        <div class="foto"><img src="img/perros raza mediana 3.jpg" alt="Perro mediano 3" onclick="mostrarImagen(this)"><p>Canela</p></div>
+        <div class="foto"><img src="img/perros raza mediana 4.jpg" alt="Perro mediano 4" onclick="mostrarImagen(this)"><p>Daisy</p></div>
+        <div class="foto"><img src="img/perros raza mediana 5.jpg" alt="Perro mediano 5" onclick="mostrarImagen(this)"><p>Chispa</p></div>
       </div>
     </section>
 
     <section>
       <h3>Raza Grande</h3>
       <div class="galeria">
-        <div class="foto"><img src="img/perros raza grande 1.jpg" alt="Perro grande 1"><p>Zeus</p></div>
-        <div class="foto"><img src="img/perros raza grande 2.jpg" alt="Perro grande 2"><p>Sasha</p></div>
-        <div class="foto"><img src="img/perros raza grande 3.jpg" alt="Perro grande 3"><p>Thor</p></div>
-        <div class="foto"><img src="img/perros raza grande 4.jpg" alt="Perro grande 4"><p>Greta</p></div>
-        <div class="foto"><img src="img/perros raza grande 5.jpg" alt="Perro grande 5"><p>Bruno</p></div>
+        <div class="foto"><img src="img/perros raza grande 1.jpg" alt="Perro grande 1" onclick="mostrarImagen(this)"><p>Zeus</p></div>
+        <div class="foto"><img src="img/perros raza grande 2.jpg" alt="Perro grande 2" onclick="mostrarImagen(this)"><p>Sasha</p></div>
+        <div class="foto"><img src="img/perros raza grande 3.jpg" alt="Perro grande 3" onclick="mostrarImagen(this)"><p>Thor</p></div>
+        <div class="foto"><img src="img/perros raza grande 4.jpg" alt="Perro grande 4" onclick="mostrarImagen(this)"><p>Greta</p></div>
+        <div class="foto"><img src="img/perros raza grande 5.jpg" alt="Perro grande 5" onclick="mostrarImagen(this)"><p>Bruno</p></div>
       </div>
     </section>
   </main>
 
+  <div id="modal" class="modal" onclick="cerrarModal()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenGrande" class="modal-contenido" alt="">
+  </div>
+
   <footer>
     <p>© 2025 Adopta un Amigo. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    function mostrarImagen(img) {
+      const modal = document.getElementById("modal");
+      const imagenGrande = document.getElementById("imagenGrande");
+      modal.style.display = "block";
+      imagenGrande.src = img.src;
+      imagenGrande.alt = img.alt;
+    }
+
+    function cerrarModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
 </body>
 </html>
