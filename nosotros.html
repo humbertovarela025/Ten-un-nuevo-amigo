@@ -4,6 +4,30 @@
   <meta charset="UTF-8">
   <title>Nosotros - Adopta un Amigo</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    main {
+      display: flex;
+      gap: 2em;
+      padding: 2em;
+    }
+    .contenido {
+      flex: 3;
+    }
+    .barra {
+      flex: 1;
+      background: #ff6f61;
+      color: white;
+      padding: 1em;
+      border-radius: 8px;
+      font-weight: bold;
+      height: fit-content;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .barra h3 {
+      margin-top: 0;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -19,8 +43,21 @@
   </header>
 
   <main>
-    <h1>¿Quiénes somos?</h1>
-    <p>Somos una organización sin fines de lucro dedicada a rescatar, cuidar y buscar hogares para perritos en situación de calle. Cada adopción cambia dos vidas: la del perro y la tuya.</p>
+    <div class="contenido">
+      <h1>¿Quiénes somos?</h1>
+      <p>Somos una organización sin fines de lucro dedicada a rescatar, cuidar y buscar hogares para perritos en situación de calle. Cada adopción cambia dos vidas: la del perro y la tuya.</p>
+
+      <h2>Visión</h2>
+      <p>Ser la organización líder en adopción responsable y cuidado animal en nuestra región, promoviendo un mundo donde cada perro tenga un hogar lleno de amor y respeto.</p>
+
+      <h2>Misión</h2>
+      <p>Rescatar perros en situación vulnerable, brindarles atención médica y emocional, y facilitar su adopción en hogares responsables que aseguren su bienestar y felicidad.</p>
+    </div>
+    
+    <aside class="barra">
+      <h3>Vacunación</h3>
+      <p>Todos nuestros perros tienen sus vacunas al día para garantizar su salud y la de sus futuros hogares.</p>
+    </aside>
   </main>
 
   <footer>
