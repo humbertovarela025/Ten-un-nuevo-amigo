@@ -1,0 +1,43 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div.ficha {
+  width: 200px;
+  height: 250px;
+  float: left;
+  margin: 15px;
+  text-align: center;
+}
+
+div.ficha img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+div.ficha img:hover {
+  transform: scale(1.1);
+}
+
+ul#menu {
+  margin: 1px;
+  padding: 1px;
+  list-style-type: none;
+}
+
+#menu li {
+  background-color: #89ffd4;
+  border: lightblue 3px solid;
+  margin: 1px;
+  float: left;
+  padding: 10px;
+}
+
+#menu li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
